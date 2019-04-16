@@ -2,7 +2,9 @@
 color:red;
 font-size: 16px;
 }
-
+#example1_wrapper{
+       width: 100%;float: left;overflow-x: scroll;
+     }
 /*!
  *   AdminLTE v2.4.8
  *   Author: Almsaeed Studio

@@ -50,15 +50,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($expanses as $expanse): ?>
+                  <?php foreach ($expenses as $expense): ?>
                     <tr>
-                      <td><?= $expanse->date ?></td>
-                      <td><?= $expanse->category ?></td>
-                      <td><?= $expanse->employee_name ?></td>
-                      <td><?= $expanse->employee_address ?></td>
-                      <td><?= $expanse->expense_description ?></td>
-                      <td><?= $expanse->pre_tax_amount ?></td>
-                      <td><?= $expanse->tax_amount ?></td>
+                      <td><?= $expense->date ?></td>
+                      <td><?= $expense->category ?></td>
+                      <td><?= $expense->employee_name ?></td>
+                      <td><?= $expense->employee_address ?></td>
+                      <td><?= $expense->expense_description ?></td>
+                      <td><?= $expense->pre_tax_amount ?></td>
+                      <td><?= $expense->tax_amount ?></td>
                 </tr>    
                   <?php endforeach ?>
                 </tbody>

@@ -18,7 +18,7 @@ Class User_Auth extends CI_Controller {
 
 		// Load database
 		$this->load->model('user_model');
-		$this->load->model('expanse_model');
+		$this->load->model('expense_model');
 	}
 
 	// Show login page
@@ -154,7 +154,7 @@ Class User_Auth extends CI_Controller {
 		        	$data['expense_description'] = !empty($value['expense_description'])?$value['expense_description']:"";
 		        	$data['pre_tax_amount'] = !empty($value['pre_tax_amount'])?$value['pre_tax_amount']:"";
 		        	$data['tax_amount'] = !empty($value['tax_amount'])?$value['tax_amount']:"";
-		        	$this->expanse_model->save($data);
+		        	$this->expense_model->save($data);
 		        }
 		        $result =  array('message'=>'Successfully uploaded.','type'=>'1');;	
 			}
@@ -174,9 +174,12 @@ Class User_Auth extends CI_Controller {
     }
 
     public function dashboard() {
+    	if(empty($this->session->userdata['logged_in'])){
+				redirect(base_url());
+		}
     	$user_id = $this->session->userdata['logged_in']['user_id'];
     	$condition = "user_id = '$user_id'";
-    	$result['expanses'] = $this->expanse_model->findAll($condition);
+    	$result['expenses'] = $this->expense_model->findAll($condition);
     	return $this->load->view('dashboard',$result);
     }
 
