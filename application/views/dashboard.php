@@ -28,7 +28,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Employee Expanses</h3>
+              <h3 class="box-title">Employee Expenses</h3>
               <div style="float: right;">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Upload File</button>
                 <a href="<?= base_url() ?>index.php/User_Auth/logout"><button type="button" class="btn btn-success">Logout</button></a>
