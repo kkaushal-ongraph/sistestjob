@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php
-    if (isset($this->session->userdata['logged_in'])) {
-        header("location: http://localhost/code/index.php/User_Auth/dashboard");
-    }
-?>
+<?= phpinfo()?>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
